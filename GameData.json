@@ -1,0 +1,82 @@
+{
+    "currentLevelIndex": 3,
+    "levels": [
+        {
+            "name": "TUTORIAL",
+            "index": 0,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 01",
+            "index": 1,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 02",
+            "index": 2,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 03",
+            "index": 3,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 04",
+            "index": 4,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 05",
+            "index": 5,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 06",
+            "index": 6,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 07",
+            "index": 7,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 08",
+            "index": 8,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 09",
+            "index": 9,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": false
+        },
+        {
+            "name": "LEVEL 10",
+            "index": 10,
+            "lockState": 1,
+            "completeState": 0,
+            "isLastLevel": true
+        }
+    ]
+}

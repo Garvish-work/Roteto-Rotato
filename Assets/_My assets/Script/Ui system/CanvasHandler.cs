@@ -23,7 +23,6 @@ public class CanvasHandler : MonoBehaviour, ICanvasHandler
         {
             canvasGroup.blocksRaycasts = false;    
             canvasGroup.alpha = 0;    
-            Debug.Log("Timer finished!");
         }));
     }
 
@@ -35,7 +34,6 @@ public class CanvasHandler : MonoBehaviour, ICanvasHandler
         {
             canvasGroup.interactable = true;
             canvasGroup.blocksRaycasts = true;
-            Debug.Log("Timer finished!");
         }));
     }
 

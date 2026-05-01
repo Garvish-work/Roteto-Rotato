@@ -9,7 +9,11 @@ public class LevelCompleteTrigger : MonoBehaviour
         if (collider.CompareTag ("Player"))
         {
             ballsIndex++;
-            if (ballsIndex >= 4) LevelActions.LevelCompleted?.Invoke();
+            if (ballsIndex >= 4)
+            {
+                LevelActions.LevelCompleted?.Invoke();
+                AudioActions.PlaySfx?.Invoke(SfxType.LEVEL_COMPLETE);
+            }
         }
 
     }

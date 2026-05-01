@@ -88,6 +88,8 @@ public class SaveSystem : MonoBehaviour
 [System.Serializable]
 public class GameData
 {
+    public int gameOpened = 0;
+    public int askToRate = 0;
     public int currentLevelIndex = 0;
     public Level[] levels;
 }

@@ -7,14 +7,16 @@ public class GameplayUiHandler : MonoBehaviour
 
     int levelIndex = 0;
     [SerializeField] private TMP_Text levelIndexText;
+    [SerializeField] private AdsConfig adsConfig;
 
     private void Start()
     {
         saveSystem = SaveSystem.instance;
+        AdsCounter();
 
         levelIndex = saveSystem.GetCurrentLevelIndex();
-        if (levelIndex == 0) levelIndexText.text = "TUTORIAL";
-        else levelIndexText.text = $"<color=#E3E3E3>Level</color><b> {levelIndex.ToString("00")}";
+        if (levelIndex == 0) levelIndexText.text = "Tutorial";
+        else levelIndexText.text = $"<size=50>Level</size>{levelIndex.ToString("00")}";
     }
 
     private void OnEnable()
@@ -48,6 +50,16 @@ public class GameplayUiHandler : MonoBehaviour
 
         if (!levelInformation.isLastLevel) UiSystemActions.OpenCanvasAction(CanvasEnums.LEVEL_COMPLETE_CANVAS);
         else UiSystemActions.OpenCanvasAction(CanvasEnums.ALL_LEVEL_COMPLETED_CANVAS);    
+    }
+
+    private void AdsCounter()
+    {
+        adsConfig.playCount++;
+        if (adsConfig.playCount >= adsConfig.maxPlayCount)
+        {
+            AdsAction.ShowInterstitialAds?.Invoke();
+            adsConfig.playCount = 0;
+        }
     }
 }
 

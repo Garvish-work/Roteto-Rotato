@@ -16,9 +16,4 @@ public class PlayerSystem : MonoBehaviour
     {
         shadowHolder.position = transform.position;
     }
-
-    void FixedUpdate()
-    {
-        //rb.AddForce(Vector3.forward * 0.1f, ForceMode.Impulse);
-    }
 }

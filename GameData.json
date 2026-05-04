@@ -1,5 +1,7 @@
 {
-    "currentLevelIndex": 1,
+    "gameOpened": 0,
+    "askToRate": 0,
+    "currentLevelIndex": 4,
     "levels": [
         {
             "name": "TUTORIAL",

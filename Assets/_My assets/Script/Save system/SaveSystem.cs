@@ -26,6 +26,12 @@ public class SaveSystem : MonoBehaviour
         LoadGameData();
     }
 
+    [ContextMenu("Show save path")]
+    private void ShowSavePath()
+    {
+        Debug.Log(Application.persistentDataPath);
+    }
+
     private void OnEnable()
     {
         LevelActions.LevelCompleted += SetLevelUnlock;

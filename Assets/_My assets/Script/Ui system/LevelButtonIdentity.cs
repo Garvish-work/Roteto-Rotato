@@ -9,8 +9,9 @@ public class LevelButtonIdentity : MonoBehaviour
     SaveSystem saveSystem;
     Level levelInformation;
 
+    [SerializeField] private LevelThumbnailData thumbnailData;
+    [SerializeField] private Image levelThumbnail;
     [SerializeField] private GameObject[] lockGraphic;
-    [SerializeField] private TMP_Text levelNameText;
 
     private void Awake()
     {
@@ -28,9 +29,7 @@ public class LevelButtonIdentity : MonoBehaviour
 
     private void UpdateLevelUi()
     {
-        if (buttonIndex == 0) levelNameText.text = "TUTO\nRIAL";
-        else levelNameText.text = "LEVEL \n<SIZE=60><color=#373737>" + buttonIndex.ToString("00");
-
+        levelThumbnail.sprite = thumbnailData.levelSprite[buttonIndex];  
         switch (levelInformation.lockState)
         {
             case LockState.LOCKED:

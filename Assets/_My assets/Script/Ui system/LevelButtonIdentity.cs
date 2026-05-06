@@ -12,6 +12,7 @@ public class LevelButtonIdentity : MonoBehaviour
     [SerializeField] private LevelThumbnailData thumbnailData;
     [SerializeField] private Image levelThumbnail;
     [SerializeField] private GameObject[] lockGraphic;
+    [SerializeField] private Transform afterSelectionParent;
 
     private void Awake()
     {
@@ -51,7 +52,9 @@ public class LevelButtonIdentity : MonoBehaviour
 
     private void OnClickEvent()
     {
-        saveSystem.SetCurrentLevel(buttonIndex);    
+        UiSystemActions.CloseCanvasAction(CanvasEnums.LEVEL_MENU);
+        transform.SetParent(afterSelectionParent);  
+        saveSystem.SetCurrentLevel(buttonIndex);
         SceneActions.ChangeScene?.Invoke("GAMEPLAY SCENE", true);
     }
 }
